@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-/boot emmc /dev/block/platform/msm_sdcc.1/by-name/boot
-/data ext4 /dev/block/platform/msm_sdcc.1/by-name/userdata
-/system ext4 /dev/block/platform/msm_sdcc.1/by-name/system
-/cache ext4 /dev/block/platform/msm_sdcc.1/by-name/cache
-/recovery emmc /dev/block/platform/msm_sdcc.1/by-name/recovery
-/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
-/efs		emmc		/dev/block/platform/msm_sdcc.1/by-name/efs
-/modem		emmc		/dev/block/platform/msm_sdcc.1/by-name/modem
-/usb-otg vfat /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;wipeingui;removable
+/efs  ext4 /dev/block/mmcblk0p11 flags=display="EFS";backup=1
+/boot emmc /dev/block/mmcblk0p14 flags=display="Boot";backup=1
+/data ext4 /dev/block/mmcblk0p26 flags=display=backup=1 
+/system ext4 /dev/block/mmcblk0p23 flags=display="System";backup=1
+/cache ext4 /dev/block/mmcblk0p24 flags=display="Cache";backup=1
+/recovery emmc /dev/block/mmcblk0p15 flags=display="Recovery";backup=1
+/fimware-modem vfat /dev/block/mmcblk0p2 flags=display="modem";backup=1
+/external_sd auto /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg auto /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;wipeingui;removable
