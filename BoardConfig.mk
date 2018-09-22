@@ -43,7 +43,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
 include $(LOCAL_PATH)/kernel.mk
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/t03g/seEnforcing.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/mondrianwifi/seEnforcing.mk
 
 # TWRP
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
