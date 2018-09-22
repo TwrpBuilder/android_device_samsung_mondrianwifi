@@ -19,6 +19,14 @@ LOCAL_PATH := device/samsung/mondrianwifi
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOOTLOADER_BOARD_NAME := mondrianwifi
 
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := krait
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 13631488
@@ -35,5 +43,10 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
 include $(LOCAL_PATH)/kernel.mk
-include device/generic/twrpbuilder/BoardConfig32.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/t03g/seEnforcing.mk
 
+# TWRP
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
